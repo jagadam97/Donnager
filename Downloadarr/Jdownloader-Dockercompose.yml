@@ -1,16 +1,16 @@
 version: "3.7"
 
 services:
-  sonarr:
-    container_name: sonarr
-    image: cr.hotio.dev/hotio/sonarr
+  jdownloader-2:
+    container_name: jdownloader-2
+    image: jlesage/jdownloader-2
     ports:
-      - "8989:8989"
+      - "5800:5800"
     environment:
       - PUID=1000
       - PGID=1000
       - UMASK=002
       - TZ=Asia/Kolkata
     volumes:
-      - /Donnager/Sonarr/config:/config
+      - /Donnager/Jdownlaoder/config:/config
     restart: unless-stopped 

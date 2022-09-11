@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  qbitmanage:
+    container_name: qbitmanage
+    image: cr.hotio.dev/hotio/qbitmanage
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Asia/Kolkata
+      - ARGS
+    volumes:
+      - /Donnager/Qbitmanage/config:/config
+    restart: unless-stopped 
