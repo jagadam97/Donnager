@@ -66,6 +66,6 @@ service docker start
 
 
 
-```YAML:Maintainarr/Sonarr-Dockercompose.yml
-
+```yaml
+--8<-- Maintainarr/Sonarr-Dockercompose.yml
 ```
