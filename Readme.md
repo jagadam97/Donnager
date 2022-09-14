@@ -17,7 +17,7 @@ As this is experimental server and i would like to get back to documentation whe
 <img src="media/frustratedkid.webp"  width=40% height=40%>
 
 # Containers & VMs
-## [Maintainer](Maintainer/Readme.md)
+## [Maintainer](Maintainer/)
 Built on alpine Container with [Docker](https://www.docker.com/) running with [Portainer](https://www.portainer.io/). Contains following Docker Containers
 
 | Container | Website |
