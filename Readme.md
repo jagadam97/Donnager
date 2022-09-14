@@ -63,3 +63,9 @@ By default, the Docker service is not activated to run by the system automatical
 rc-update add docker boot
 service docker start
 ```
+
+
+
+```YAML:Maintainarr/Sonarr-Dockercompose.yml
+
+```
