@@ -64,7 +64,22 @@ rc-update add docker boot
 service docker start
 ```
 
+# Steps to install Portainer on Docker.
+### I am using [Portainer Business Edition](https://www.portainer.io) with 5 free Licences provided to me.
 
+## 1. First, retrieve the stack YML manifest:
 
-```yaml:Maintainarr/Sonarr-Dockercompose.yml
+```sh
+curl -L https://downloads.portainer.io/ee2-15/portainer-agent-stack.yml -o portainer-agent-stack.yml
 ```
+## 2. Then use the downloaded YML manifest to deploy your stack:
+```sh
+docker stack deploy -c portainer-agent-stack.yml portainer
+```
+
+## 3. Logging In
+Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
+```
+https://localhost:9443
+```
+Replace localhost with the relevant IP address
