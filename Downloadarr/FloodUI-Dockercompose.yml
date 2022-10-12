@@ -1,14 +1,16 @@
+version: "2.1"
 services:
   flood:
     hostname: flood
     image: jesec/flood
     user: 1000:1000
+    restart: always
     command: --port 3001 --allowedpath /data
     environment:
       HOME: /config
     volumes:
-      - /Donnager/FloodUI/config:/config
-      - /Donnager/FloodUI/data0:/data
+      - /home/pi/qbittorrent/config:/config
+      - /mnt/ext-HDD/torrents:/downloads
     ports:
-      - "3001:3001"
-    restart: unless-stopped 
+      - 127.0.0.1:3001:3001
+    restart: unless-stopped
