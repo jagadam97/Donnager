@@ -12,5 +12,6 @@ services:
       - UMASK=002
       - TZ=Asia/Kolkata
     volumes:
-      - /Donnager/Qbittorrent/config:/config
+      - /donnager/config/Qbittorrent:/config
+      - /donnager:/donnager
     restart: unless-stopped 
