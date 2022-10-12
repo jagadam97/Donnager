@@ -4,11 +4,6 @@ services:
     hostname: flood    
     image: jesec/flood    
     user: 1000:1001    
-    restart: unless-stopped    
-    environment:      
-        HOME: /config    
-    volumes:      
-        - /flood:/config      
-        - /flood:/data    
+    restart: unless-stopped       
     ports:      
         - 3001:3001
