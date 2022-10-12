@@ -2,8 +2,7 @@ services:
   flood:
     hostname: flood
     image: jesec/flood
-    user: 1000:1001
-    restart: unless-stopped
+    user: 1000:1000
     command: --port 3001 --allowedpath /data
     environment:
       HOME: /config
