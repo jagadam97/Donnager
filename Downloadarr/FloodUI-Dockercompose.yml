@@ -11,5 +11,5 @@ services:
       - /Donnager/FloodUI/config:/config
       - /Donnager/FloodUI/data0:/data
     ports:
-      - 127.0.0.1:3001:3001
+      - "3001:3001"
     restart: unless-stopped 
