@@ -1,14 +1,22 @@
 services:
   flood:
-    hostname: flood
-    image: jesec/flood
-    user: 1000:1001
-    restart: unless-stopped
-    command: --port 3001 --allowedpath /data
-    environment:
-      HOME: /config
-    volumes:
-      - /home/jc/dlconfig:/config
-      - /mnt/data0:/data
+    build:
+      context: .
+      dockerfile: flood.dockerfile
     ports:
-      - 127.0.0.1:3001:3001
+      - 3000:3000
+    links:
+      - rtorrent
+    depends_on:
+      - rtorrent
+    environment:
+      - RTORRENT_SOCK=true
+      - NODE_ENV=development
+      - FLOOD_SECRET=flood
+    restart: always
+    volumes:
+      - ./downloads:/data/downloads
+      - sock:/data
+
+volumes:
+  sock:
