@@ -9,8 +9,8 @@ services:
     environment:      
         HOME: /config    
     volumes:      
-        - /mnt/user/appdata/flood:/config      
-        - /mnt/user/appdata/flood:/data    
+        - /flood:/config      
+        - /flood:/data    
     ports:      
         - 3001:3001    
     network_mode: bridge
