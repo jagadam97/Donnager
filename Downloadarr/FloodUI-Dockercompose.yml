@@ -1,16 +1,17 @@
-version: "2.1"
+version: "3.7"
+
 services:
-  flood:
-    hostname: flood
-    image: jesec/flood
-    user: 1000:1000
-    restart: always
-    command: --port 3001 --allowedpath /data
-    environment:
-      HOME: /config
-    volumes:
-      - /home/pi/qbittorrent/config:/config
-      - /mnt/ext-HDD/torrents:/downloads
+  qflood:
+    container_name: qflood
+    image: cr.hotio.dev/hotio/qflood
     ports:
-      - 127.0.0.1:3001:3001
-    restart: unless-stopped
+      - "8080:8080"
+      - "3000:3000"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+      - FLOOD_AUTH=false
+    volumes:
+      - /<host_folder_config>:/config
