@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   flood:
     build:
@@ -5,10 +7,6 @@ services:
       dockerfile: flood.dockerfile
     ports:
       - 3000:3000
-    links:
-      - rtorrent
-    depends_on:
-      - rtorrent
     environment:
       - RTORRENT_SOCK=true
       - NODE_ENV=development
@@ -17,6 +15,5 @@ services:
     volumes:
       - ./downloads:/data/downloads
       - sock:/data
-
 volumes:
   sock:
