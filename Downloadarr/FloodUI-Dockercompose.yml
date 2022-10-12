@@ -1,17 +1,16 @@
-version: "3.7"
-
-services:
-  qflood:
-    container_name: qflood
-    image: cr.hotio.dev/hotio/qflood
-    ports:
-      - "8080:8080"
-      - "3000:3000"
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - UMASK=002
-      - TZ=Etc/UTC
-      - FLOOD_AUTH=false
-    volumes:
-      - /<host_folder_config>:/config
+version: '3'
+services:  
+    flood:    
+    hostname: flood    
+    image: jesec/flood    
+    user: 1000:1001    
+    restart: unless-stopped    
+    command: --port 3001 --allowedpath /data    
+    environment:      
+        HOME: /config    
+    volumes:      
+        - /mnt/user/appdata/flood:/config      
+        - /mnt/user/appdata/flood:/data    
+    ports:      
+        - 3001:3001    
+    network_mode: bridge
