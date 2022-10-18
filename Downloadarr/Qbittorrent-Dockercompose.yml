@@ -10,7 +10,7 @@ services:
       - TZ=Europe/London
       - WEBUI_PORT=8080
     volumes:
-      - /donnager/config/qbittorrent:/config
+      - config/qbittorrent:/config
       - /mnt/ssd:/mnt/ssd
     ports:
       - 8080:8080
