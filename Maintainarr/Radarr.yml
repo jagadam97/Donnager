@@ -13,4 +13,5 @@ services:
       - TZ=Asia/Kolkata
     volumes:
       - /config/radarr:/config
+      - /mnt/ssd:/mnt/ssd
     restart: unless-stopped 
