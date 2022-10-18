@@ -12,5 +12,5 @@ services:
       - UMASK=002
       - TZ=Asia/Kolkata
     volumes:
-      - /Donnager/Sonarr/config:/config
+      - config/sonarr:/config
     restart: unless-stopped 
