@@ -12,5 +12,5 @@ services:
       - UMASK=002
       - TZ=Asia/Kolkata
     volumes:
-      - /Donnager/Radarr/config:/config
+      - /config/radarr:/config
     restart: unless-stopped 
