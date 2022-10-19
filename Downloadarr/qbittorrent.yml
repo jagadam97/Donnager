@@ -14,3 +14,4 @@ services:
     volumes:
       - /config/qbit:/config
       - /mnt/ssd:/mnt/ssd
+    restart: unless-stopped
