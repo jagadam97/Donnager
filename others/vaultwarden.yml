@@ -6,5 +6,5 @@ services:
         volumes:
             - '/vw-data/:/data/'
         ports:
-            - '80:80'
+            - '90:80'
         image: 'vaultwarden/server:latest'
