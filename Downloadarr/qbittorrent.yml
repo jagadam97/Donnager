@@ -13,5 +13,5 @@ services:
       - TZ=Asia/Kolkata
     volumes:
       - /config/qbit:/config
-      - /mnt/bx1000:/mnt/bx1000
+      - /mnt/bx1000:/mnt/ssd
     restart: unless-stopped
