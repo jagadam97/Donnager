@@ -13,5 +13,5 @@ services:
       - TZ=Asia/Kolkata
     volumes:
       - /config/sonarr:/config
-      - /mnt/ssd:/mnt/ssd
+      - /mnt/bx1000:/mnt/bx1000
     restart: unless-stopped 
