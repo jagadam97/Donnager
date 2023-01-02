@@ -15,7 +15,7 @@ services:
       - /Donnager/Jackett/config:/config
     restart: unless-stopped 
     
-  jackett:
+  jackett1:
     container_name: pjackett
     image: cr.hotio.dev/hotio/jackett
     ports:
