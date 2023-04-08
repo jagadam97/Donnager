@@ -5,8 +5,8 @@ services:
     container_name: pihole
     image: pihole/pihole:latest
     ports:
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "54:53/tcp"
+      - "54:53/udp"
       - "801:80/tcp"
     environment:
       TZ: 'Asia/Kolkata'
