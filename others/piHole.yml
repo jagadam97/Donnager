@@ -7,7 +7,7 @@ services:
     ports:
       - "53:53/tcp"
       - "53:53/udp"
-      - "80:80/tcp"
+      - "801:80/tcp"
     environment:
       TZ: 'Asia/Kolkata'
       WEBPASSWORD: 'JD@27reddy'
