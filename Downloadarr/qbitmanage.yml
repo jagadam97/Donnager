@@ -12,4 +12,5 @@ services:
       - ARGS
     volumes:
       - /Donnager/Qbitmanage/config:/config
+      - /mnt/bx1000:/mnt/ssd
     restart: unless-stopped 
