@@ -3,7 +3,7 @@ version: "3.7"
 services:
   jackett:
     container_name: jackett
-    image: cr.hotio.dev/hotio/jackett
+    image: linuxserver/jackett
     ports:
       - "9117:9117"
     environment:
