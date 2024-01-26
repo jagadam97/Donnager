@@ -12,6 +12,6 @@ services:
       - UMASK=002
       - TZ=Asia/Kolkata
     volumes:
-      - /config/qbit:/config
+      - /config:/config
       - /mnt/bx1000:/mnt/ssd
     restart: unless-stopped
