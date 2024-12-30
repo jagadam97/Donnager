@@ -23,9 +23,8 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /mnt/bx1000:/config
-      - /mnt/bx1000:/downloads
-      - /mnt/bx1000:/watch
+      - /config/transmission:/config
+      - /mnt/bx1000:/mnt/ssd
     ports:
       - 9091:9091
       - 51413:51413
