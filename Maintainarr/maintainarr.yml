@@ -14,6 +14,7 @@ services:
     volumes:
       - /config/sonarr:/config
       - /mnt/bx1000:/mnt/ssd
+      - /mnt/hd4000:/mnt/hdd
     restart: unless-stopped 
 
   radarr:
@@ -29,6 +30,7 @@ services:
     volumes:
       - /config/radarr:/config
       - /mnt/bx1000:/mnt/ssd
+      - /mnt/hd4000:/mnt/hdd
     restart: unless-stopped
 
 
@@ -45,5 +47,6 @@ services:
     volumes:
       - /config/bazarr:/config
       - /mnt/bx1000:/mnt/ssd
+      - /mnt/hd4000:/mnt/hdd
     restart: unless-stopped 
 
