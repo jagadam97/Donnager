@@ -3,14 +3,7 @@ networks:
     external: true
     name: immich_default
 
-volumes:
-  051aac7db7cd41a758fd867ad1f4403545953292ecdbd90d9f955c2e50e89b7d:
-    external: true
-  immich_model-cache:
-    external: true
-
 services:
-
   immich_server:
     container_name: immich_server
     image: ghcr.io/immich-app/immich-server:release
