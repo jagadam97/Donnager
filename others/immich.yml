@@ -41,8 +41,6 @@ services:
     restart: always
     devices:
       - /dev/dri:/dev/dri
-    volumes:
-      - model-cache:/cache
     environment:
       - UPLOAD_LOCATION=${UPLOAD_LOCATION}
       - DB_DATA_LOCATION=${DB_DATA_LOCATION}
