@@ -42,7 +42,7 @@ services:
     devices:
       - /dev/dri:/dev/dri
     volumes:
-      - immich_model-cache:/cache
+      - model-cache:/cache
     environment:
       - UPLOAD_LOCATION=${UPLOAD_LOCATION}
       - DB_DATA_LOCATION=${DB_DATA_LOCATION}
