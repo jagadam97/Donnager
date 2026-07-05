@@ -2,13 +2,7 @@ networks:
   immich_default:
     external: true
     name: immich_default
-
-volumes:
-  immich_model-cache:
-    external: true
-
 services:
-
   immich_server:
     container_name: immich_server
     image: ghcr.io/immich-app/immich-server:release
@@ -33,8 +27,7 @@ services:
       - immich_default
     depends_on:
       - database
-      - immich_redis
-
+      - redis
   immich_machine_learning:
     container_name: immich_machine_learning
     image: ghcr.io/immich-app/immich-machine-learning:release-openvino
@@ -51,7 +44,6 @@ services:
       - DEVICE=openvino
     networks:
       - immich_default
-
   database:
     container_name: immich_postgres
     image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
@@ -66,8 +58,7 @@ services:
       - DB_STORAGE_TYPE=SSD
     networks:
       - immich_default
-
-  immich_redis:
+  redis:
     container_name: immich_redis
     image: docker.io/valkey/valkey:8-bookworm
     restart: always
