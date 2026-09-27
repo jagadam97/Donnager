@@ -28,22 +28,22 @@ services:
     depends_on:
       - database
       - redis
-  immich_machine_learning:
-    container_name: immich_machine_learning
-    image: ghcr.io/immich-app/immich-machine-learning:release-openvino
-    restart: always
-    devices:
-      - /dev/dri:/dev/dri
-    environment:
-      - UPLOAD_LOCATION=${UPLOAD_LOCATION}
-      - DB_DATA_LOCATION=${DB_DATA_LOCATION}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_USERNAME=${DB_USERNAME}
-      - DB_DATABASE_NAME=${DB_DATABASE_NAME}
-      - IMMICH_VERSION=release
-      - DEVICE=openvino
-    networks:
-      - immich_default
+  # immich_machine_learning:
+  #   container_name: immich_machine_learning
+  #   image: ghcr.io/immich-app/immich-machine-learning:release-openvino
+  #   restart: always
+  #   devices:
+  #     - /dev/dri:/dev/dri
+  #   environment:
+  #     - UPLOAD_LOCATION=${UPLOAD_LOCATION}
+  #     - DB_DATA_LOCATION=${DB_DATA_LOCATION}
+  #     - DB_PASSWORD=${DB_PASSWORD}
+  #     - DB_USERNAME=${DB_USERNAME}
+  #     - DB_DATABASE_NAME=${DB_DATABASE_NAME}
+  #     - IMMICH_VERSION=release
+  #     - DEVICE=openvino
+  #   networks:
+  #     - immich_default
   database:
     container_name: immich_postgres
     image: ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0
